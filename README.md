@@ -26,7 +26,7 @@ TaskFlow is a high-performance, professional collaborative project management pl
 
 1. **Clone the repo**:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Agraj1303/Team_Task_Manager.git
    cd team-task-manager
    ```
 
