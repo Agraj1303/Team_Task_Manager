@@ -213,7 +213,12 @@ const KanbanBoard = ({ isAdmin }) => {
                       <div className="flex items-center gap-2">
                         {task.assignedTo && (
                           <div className="relative">
-                            <img src={task.assignedTo.avatar} alt="avatar" className="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 shadow-sm" title={task.assignedTo.name} />
+                            <img 
+                              src={task.assignedTo.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(task.assignedTo.name)}&background=random`} 
+                              alt="avatar" 
+                              className="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 shadow-sm" 
+                              title={task.assignedTo.name} 
+                            />
                             <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-500 border-2 border-white dark:border-slate-800 rounded-full"></span>
                           </div>
                         )}

@@ -83,7 +83,11 @@ const AdminUsers = () => {
                 <tr key={user._id} className="border-b border-slate-50 dark:border-slate-700/50 hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
                   <td className="p-6">
                     <div className="flex items-center gap-3">
-                      <img src={user.avatar} className="w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-700" alt="" />
+                      <img 
+                        src={user.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=random`} 
+                        className="w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-700" 
+                        alt="" 
+                      />
                       <span className="font-bold text-slate-900 dark:text-white">{user.name}</span>
                     </div>
                   </td>

@@ -76,7 +76,11 @@ const AdminLayout = () => {
 
         <div className="p-4 m-4 mt-auto rounded-2xl bg-slate-50/80 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-700/50 backdrop-blur-sm">
           <div className="flex items-center gap-3 mb-4">
-            <img className="object-cover w-11 h-11 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm" src={user?.avatar} alt="avatar" />
+            <img 
+              className="object-cover w-11 h-11 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm" 
+              src={user?.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(user?.name || 'User')}&background=random`} 
+              alt="avatar" 
+            />
             <div className="flex flex-col min-w-0">
               <span className="text-sm font-bold text-slate-900 dark:text-white truncate">{user?.name}</span>
               <span className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold mt-0.5">Administrator</span>
